@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="toggleParagraphVisibility()">Display Details</button>
+<p *ngIf="paragraphVisibility">Secret password = avocado</p>
+<div
+    *ngFor="let clicky of clickArray; let i = index"
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i >= 5}"
+    >
+  {{ clicky }}
+</div>
